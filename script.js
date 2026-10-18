@@ -281,7 +281,7 @@ function refresh() {
  
 setInterval(function(){  
 		$.getJSON("https://radio-admin.guillarda.fr/status-json.xsl", function(json) {
-			let title = json.icestats.source.title;
+			let title = json.icestats.source.metadata.x_icy_title;
 			if (typeof title === 'undefined') { title = "Émission sans titre"}
 			document.getElementById('currentPlaying').innerHTML = (`<h2>${title}</h2>`)
 			document.getElementById('currentPlaying2').innerHTML = (`<h2>${title}</h2>`)
