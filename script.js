@@ -280,7 +280,7 @@ function refresh() {
 }
  
 setInterval(function(){  
-		$.getJSON("https://radio-admin.guillarda.fr/infojson", function(json) {
+		$.getJSON("https://radio-admin.guillarda.fr/status-json.xsl", function(json) {
 			let title = json.icestats.source.title;
 			if (typeof title === 'undefined') { title = "Émission sans titre"}
 			document.getElementById('currentPlaying').innerHTML = (`<h2>${title}</h2>`)
